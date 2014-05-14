@@ -1,0 +1,12 @@
+1. Import database.sql into your MySQL database
+2. Add any custom applications you want into the table
+	Insert a new row into the custom_apps table
+		ID: Leave blank, auto increments
+		name: Name of your application
+		v2app: if set to 1, it will be used only for v2 lookups. if set to 0, it will be pushed using the normal whitelist
+		test_app: if set to 1, will only show on test devices. if set to 0, every device will get this app
+		content: the actual app code. See the included app examples on how it is syntaxed.
+3. Change line 21 of applist.php with your MySQL settings
+4. Enjoy
+
+NOTE: The Test device check function will NOT work without the ota database being available as well.
